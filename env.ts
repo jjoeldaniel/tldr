@@ -42,11 +42,6 @@ if (!RAW_DISCORD_TOKEN) {
  */
 export const DISCORD_TOKEN = RAW_DISCORD_TOKEN;
 
-const RAW_DISCORD_ROLE_ID = Deno.env.get("DISCORD_ROLE_ID");
-if (!RAW_DISCORD_ROLE_ID) {
-  throw new Error("DISCORD_ROLE_ID environment variable is required");
-}
-
 const RAW_PALM_API_KEY = Deno.env.get("PALM_API_KEY");
 if (!RAW_PALM_API_KEY) {
   throw new Error("RAW_PALM_API_KEY environment variable is required");
