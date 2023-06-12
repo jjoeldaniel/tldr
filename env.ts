@@ -47,12 +47,6 @@ if (!RAW_DISCORD_ROLE_ID) {
   throw new Error("DISCORD_ROLE_ID environment variable is required");
 }
 
-/**
- * DISCORD_ROLE_ID is the Discord role ID that is allowed to use the TLDR
- * application command. The command is intended to be used by board members.
- */
-export const DISCORD_ROLE_ID = RAW_DISCORD_ROLE_ID;
-
 const RAW_PALM_API_KEY = Deno.env.get("PALM_API_KEY");
 if (!RAW_PALM_API_KEY) {
   throw new Error("RAW_PALM_API_KEY environment variable is required");

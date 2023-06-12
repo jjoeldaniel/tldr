@@ -65,11 +65,6 @@ export async function handle(request: Request): Promise<Response> {
         return new Response("Invalid request", { status: 400 });
       }
 
-      // Assert the interaction member has the required role.
-      if (!interaction.member?.roles.includes(env.DISCORD_ROLE_ID)) {
-        return new Response("Invalid request", { status: 400 });
-      }
-
       // Assert the interaction data is a message.
       if (interaction.data.type !== discord.ApplicationCommandType.Message) {
         return new Response("Invalid request", { status: 400 });
